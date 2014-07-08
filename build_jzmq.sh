@@ -34,6 +34,10 @@ if [ $(cat /etc/lsb-release|grep -i release|grep 12\.) ]; then
   curl -L -v -s https://github.com/nathanmarz/jzmq/pull/2.patch 2>/dev/null | patch -p
 fi
 # Build package
+touch ${origdir}/tmp/jzmq/src/classdist_noinst.stamp
+cd src
+CLASSPATH=.:./.:$CLASSPATH javac -d . org/zeromq/ZMQ.java org/zeromq/ZMQException.java org/zeromq/ZMQQueue.java org/zeromq/ZMQForwarder.java org/zeromq/ZMQStreamer.java
+cd ..
 ./autogen.sh
 ./configure --prefix=${prefix}
 make
