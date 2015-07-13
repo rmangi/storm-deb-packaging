@@ -6,7 +6,7 @@ orig/conf/* etc/storm/
 # skip the examples
 # skip external
 orig/lib usr/lib/storm/
-orig/logback/* etc/storm/
+orig/log4j2/* etc/storm/
 orig/public usr/lib/storm/
 
 # init scripts are managed by rules
@@ -17,5 +17,5 @@ orig/DISCLAIMER usr/lib/storm/
 orig/LICENSE usr/lib/storm/
 orig/NOTICE usr/lib/storm/
 orig/README.markdown usr/lib/storm/
-orig/RELEASE usr/lib/storm/
+#orig/RELEASE usr/lib/storm/
 orig/SECURITY.md usr/lib/storm/

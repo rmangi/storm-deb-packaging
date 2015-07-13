@@ -3,7 +3,7 @@
 
 # link TO configs
 etc/storm usr/lib/storm/conf
-etc/storm usr/lib/storm/logback
+etc/storm usr/lib/storm/log4j2
 
 # link TO logs
 var/log/storm usr/lib/storm/logs
